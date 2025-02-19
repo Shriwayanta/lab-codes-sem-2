@@ -18,15 +18,15 @@ int findlargest(int *arr, int size)
 int main()
 {
     int n;
-    printf("Enter the number of elements: ");
+    printf("Enter the number of elements : ");
     scanf("%d", &n);
     int arr[n];
-    printf("Enter %d elements: ", n);
+    printf("Enter %d elements :\n", n);
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
     int largest = findlargest(arr, n);
-    printf("Largest element is: %d", largest);
+    printf("Largest element is : %d", largest);
     return 0;
 }
