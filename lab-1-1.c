@@ -1,6 +1,4 @@
-/*c program to find the largest element in an array*/
-
-//method one- largest element in an array using for loop
+//method one - c program to find the largest element in an array using for loop
 
 #include <stdio.h>
 int main()

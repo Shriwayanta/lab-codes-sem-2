@@ -1,4 +1,4 @@
-//method three- largest element in an array using function
+//method three - c program to find the largest element in an array using function
 
 #include <stdio.h>
 

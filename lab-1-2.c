@@ -1,4 +1,4 @@
-//method two- largest element in an array using recursion
+//method two - c program to find the largest element in an array using recursion
 
 #include <stdio.h>
 

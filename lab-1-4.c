@@ -1,4 +1,4 @@
-// method three- largest element in an array using pointers
+// method four - c program to find the largest element in an array using pointers
 #include <stdio.h>
 int findlargest(int *arr, int size)
 {
