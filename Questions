@@ -1,0 +1,52 @@
+Q1. C program to find the largest element in an array
+    a. using loops
+    b. using recursion
+    c. using function
+    d. using pointers
+
+
+Q2. C program for
+    a. Finding the sum of all elements in the array
+    b. Inserting and deleting elements from an array
+    c. Printing all unique elements in an array.
+    d. Copying the elements of one array into another array.
+
+
+Q3. Write C code to implement
+    a. Linear search(native) without function.
+    b. Iterative linear search using function.
+    c. Recursion linear search using function.
+    d. Iterative binary search using function.
+    e. recursive binary search using function.
+
+
+Q4. Write C code to implement
+    a. Optimized bubble sort.
+    b. Insurtion sort.
+    c. Selection sort.
+
+
+Q5. Write C code to implement
+    a. Quick sort.
+    b. Merge sort.
+
+
+Q6. Write C code to implement all the primitive operation on
+    a. Singly linked list.
+    b. Doubly linked list.
+
+
+Q7. Write C code 
+    a. For static and dynamic implementation of stack with primitive operations.
+    b. To convert
+        i. Infix to postfix.
+        ii. Infix to prefix.
+        iii. Prefix to postfix.
+    c. To find a factorial of number using stack.
+    d. For static and dynamic implementation of linear search.
+
+
+Q8. Write C code to implement
+    a. In-order tree traversal
+    b. Pre-order tree traversal
+    c. Post-order tree traversal
