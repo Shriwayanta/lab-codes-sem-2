@@ -29,9 +29,9 @@ int main() {
         swapped = 0;  // Reset swapped flag
 
         for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap elements
-                temp = arr[j];
+            if (arr[j] > arr[j + 1]) 
+            {
+                temp = arr[j];  // Swap elements
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
 
