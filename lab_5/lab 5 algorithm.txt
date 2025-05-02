@@ -1,0 +1,38 @@
+a) Quick Sort (Divide and Conquer)
+
+1. Start
+2. Define function quickSort(arr, low, high):
+        If low < high:
+            Call partition(arr, low, high) → returns pivotIndex
+            Recursively call:
+                quickSort(arr, low, pivotIndex - 1)
+                quickSort(arr, pivotIndex + 1, high)
+3. Define partition(arr, low, high):
+        Set pivot = arr[high]
+        Initialize i = low - 1
+        Loop j = low to high - 1:
+            If arr[j] <= pivot, increment i and swap arr[i] with arr[j]
+        Swap arr[i + 1] with arr[high] (place pivot correctly)
+        Return i + 1 as pivot index
+4. In main(), input the array and call quickSort()
+5. Print the sorted array
+6. End
+
+b) Merge Sort (Divide and Conquer)
+
+1. Start
+2. Define function mergeSort(arr, left, right):
+        If left < right:
+            Find mid-point: mid = (left + right) / 2
+            Recursively call:
+                mergeSort(arr, left, mid)
+                mergeSort(arr, mid + 1, right)
+            Call merge(arr, left, mid, right) to merge two halves
+3. Define merge(arr, left, mid, right):
+        Create two temp arrays: L[] for left half, R[] for right half
+        Copy data to L[] and R[]
+        Merge the arrays back into arr[] in sorted order
+4. In main(), input the array and call mergeSort()
+5. Print the sorted array
+6. End
+

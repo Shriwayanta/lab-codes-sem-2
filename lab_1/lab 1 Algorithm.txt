@@ -1,0 +1,45 @@
+Q1. 
+a) 
+1. Start
+2. Read the number of elements n
+3. Declare array arr[n]
+4. Read n elements into arr
+5. Initialize largest = arr[0]
+6. Loop i from 1 to n-1:
+        If arr[i] > largest, set largest = arr[i]
+7. Print largest
+8. End
+
+b)
+1. Start
+2. Read the number of elements n
+3. Declare array arr[n]
+4. Read n elements into arr
+5. Define a recursive function
+6. Call the function with findLargest(arr, n)
+7. Print the result
+8. End
+
+c)
+1.Start
+2. Read number of elements n
+3. Declare array arr[n]
+4. Read n elements into arr
+5. Define a function int findMax(int arr[], int n):
+        Initialize max = arr[0]
+        Loop from 1 to n-1 and update max if a larger element is found
+        Return max
+6. Call findMax(arr, n) and print the result
+7. End
+
+d)
+1. Start
+2. Read number of elements n
+3. Declare array arr[n]
+4. Read n elements into arr
+5. Initialize a pointer ptr = arr
+6. Initialize largest = *ptr
+7. Loop i from 1 to n-1:
+                If *(ptr + i) > largest, update largest = *(ptr + i)
+8. Print largest
+9. End

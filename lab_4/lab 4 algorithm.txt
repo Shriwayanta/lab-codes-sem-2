@@ -1,0 +1,40 @@
+a) Optimized Bubble Sort
+
+1. Start
+2. Input the number of elements n
+3. Declare array arr[n] and input elements
+4. For i = 0 to n - 1:
+        Initialize a swapped flag to false
+        For j = 0 to n - i - 2:
+            If arr[j] > arr[j + 1], swap them and set swapped = true
+        If swapped == false, break (array is already sorted)
+5. Print the sorted array
+6. End
+
+b) Insertion Sort
+
+1. Start
+2. Input the number of elements n
+3. Declare array arr[n] and input elements
+4. For i = 1 to n - 1:
+        Store key = arr[i]
+        Set j = i - 1
+        While j >= 0 and arr[j] > key:
+            Shift arr[j] to arr[j + 1]
+            Decrement j
+        Place key at arr[j + 1]
+5. Print the sorted array
+6. End
+
+c) Selection Sort
+
+1. Start
+2. Input the number of elements n
+3. Declare array arr[n] and input elements
+4. For i = 0 to n - 2:
+        Assume minIndex = i
+        For j = i + 1 to n - 1:
+            If arr[j] < arr[minIndex], update minIndex = 
+        If minIndex != i, swap arr[i] and arr[minIndex]
+5. Print the sorted array
+6. End

@@ -1,0 +1,53 @@
+a. Finding the Sum of All Elements in the Array
+1. Start
+2. Input the number of elements n
+3. Declare array arr[n]
+4. Read n elements into the array
+5. Initialize sum = 0
+6. Loop through the array:
+        Add each element to sum
+7. Print sum
+8. End
+
+b. Inserting and Deleting Elements from an Array
+
+Insertion
+1. Start
+2. Input number of elements n
+3. Declare array arr[n + 1] (to allow space for insertion)
+4. Read n elements into the array
+5. Input element to insert and position pos
+6. Shift elements from position pos to the right
+7. Insert the new element at position pos
+8. Print the new array
+9. End
+
+Deletion
+1. Start
+2. Input number of elements n
+3. Declare array arr[n]
+4. Read n elements into the array
+5. Input the position pos to delete
+6. Shift elements from pos+1 to left
+7. Decrease size of array by 1
+8. Print the updated array
+9. End
+
+c. Printing All Unique Elements in an Array
+1. Start
+2. Input number of elements n
+3. Declare array arr[n]
+4. Read n elements into array
+5. For each element in array:
+        Count how many times it appears
+        If count is 1, print it as unique
+6. End
+
+d. Copying the Elements of One Array into Another Array
+1. Start
+2. Input number of elements n
+3. Declare arrays arr1[n] and arr2[n]
+4. Read n elements into arr1
+5. Loop through arr1 and copy each element to arr2
+6. Print arr2
+7. End
