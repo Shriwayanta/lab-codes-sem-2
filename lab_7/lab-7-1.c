@@ -1,93 +1,95 @@
 //c code for static and dynamic implementation of stack with primitive operations
 
 
-
-//static using array
 #include <stdio.h>
 #define MAX 100
 
-int stack[MAX], top = -1;
+int stack[MAX];
+int top = -1;
 
-void push_static(int value) {
-    if (top == MAX - 1)
-        printf("Stack Overflow!\n");
-    else
+// Push operation
+void push(int value) {
+    if (top >= MAX - 1)
+        printf("Stack Overflow! Cannot push %d\n", value);
+    else {
         stack[++top] = value;
-}
-
-void pop_static() {
-    if (top == -1)
-        printf("Stack Underflow!\n");
-    else
-        printf("Popped: %d\n", stack[top--]);
-}
-
-void peek_static() {
-    if (top == -1)
-        printf("Stack is empty.\n");
-    else
-        printf("Top element: %d\n", stack[top]);
-}
-
-void display_static() {
-    if (top == -1) {
-        printf("Stack is empty.\n");
-        return;
+        printf("%d pushed to stack.\n", value);
     }
-    printf("Stack elements: ");
-    for (int i = top; i >= 0; i--)
-        printf("%d ", stack[i]);
-    printf("\n");
 }
 
-
-
-//dynamic using linked list
-#include <stdlib.h>
-
-typedef struct Node {
-    int data;
-    struct Node* next;
-} Node;
-
-Node* top_dynamic = NULL;
-
-void push_dynamic(int value) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    newNode->data = value;
-    newNode->next = top_dynamic;
-    top_dynamic = newNode;
-}
-
-void pop_dynamic() {
-    if (top_dynamic == NULL) {
-        printf("Stack Underflow!\n");
-        return;
+// Pop operation
+int pop() {
+    if (top < 0) {
+        printf("Stack Underflow! Cannot pop.\n");
+        return -1;
+    } else {
+        return stack[top--];
     }
-    Node* temp = top_dynamic;
-    printf("Popped: %d\n", top_dynamic->data);
-    top_dynamic = top_dynamic->next;
-    free(temp);
 }
 
-void peek_dynamic() {
-    if (top_dynamic == NULL)
-        printf("Stack is empty.\n");
-    else
-        printf("Top element: %d\n", top_dynamic->data);
-}
-
-void display_dynamic() {
-    if (top_dynamic == NULL) {
-        printf("Stack is empty.\n");
-        return;
+// Peek operation
+int peek() {
+    if (top < 0) {
+        printf("Stack is empty!\n");
+        return -1;
+    } else {
+        return stack[top];
     }
-    Node* temp = top_dynamic;
-    printf("Stack elements: ");
-    while (temp != NULL) {
-        printf("%d ", temp->data);
-        temp = temp->next;
-    }
-    printf("\n");
 }
 
+// Display operation
+void display() {
+    if (top < 0)
+        printf("Stack is empty!\n");
+    else {
+        printf("Stack elements (top to bottom): ");
+        for (int i = top; i >= 0; i--)
+            printf("%d ", stack[i]);
+        printf("\n");
+    }
+}
+
+// Main function: Menu-driven
+int main() {
+    int choice, value;
+
+    do {
+        printf("\n--- Stack Menu ---\n");
+        printf("1. Push\n2. Pop\n3. Peek\n4. Display\n5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter value to push: ");
+                scanf("%d", &value);
+                push(value);
+                break;
+
+            case 2:
+                value = pop();
+                if (value != -1)
+                    printf("Popped: %d\n", value);
+                break;
+
+            case 3:
+                value = peek();
+                if (value != -1)
+                    printf("Top element: %d\n", value);
+                break;
+
+            case 4:
+                display();
+                break;
+
+            case 5:
+                printf("Exiting program.\n");
+                break;
+
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    } while (choice != 5);
+
+    return 0;
+}

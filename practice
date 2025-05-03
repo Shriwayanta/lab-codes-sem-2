@@ -9,7 +9,8 @@ void main()
     };
 
     struct node *head, *newnode, *temp;
-    head = 0, int choice;
+    head = 0;
+     int choice;
     while (choice)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
@@ -23,7 +24,7 @@ void main()
         else
         {
             temp->next = newnode;
-            temp = newnode
+            temp = newnode;
         }
 
         printf("Do you want to continue(0,1)?");
